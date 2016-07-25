@@ -10,15 +10,22 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+    }
+
+    /* The fixed navbar will overlay your other content, unless you add padding to the top of the body. */
+    body {
+      padding-top: 50px;
     }
     
     /* Add a gray background color and some padding to the footer */
@@ -44,7 +51,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse  navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -57,8 +64,14 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#About">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#Projects">Soft Matter Physics</a></li>
+            <li><a href="#Bioinformatics">Bioinformatics</a></li>
+          </ul>
+        </li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
@@ -70,6 +83,7 @@
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -77,18 +91,26 @@
       <div class="item active">
         <img src="images/fig5e.png" alt="Image">
         <div class="carousel-caption">
-          <h3>None</h3>
-          <p>None.</p>
-        </div>      
+          <h3>Coalescence of liquid nuclei</h3>
+          <p>When two nuclei grew and the distance between them was reduced, a liquid channel developed and facilitated their coalescence.</p>
+        </div>
       </div>
 
       <div class="item">
         <img src="images/fig5f.png" alt="Image">
         <div class="carousel-caption">
-          <h3>None</h3>
-          <p>None...</p>
+          <h3>Coalescence of liquid nuclei</h3>
+          <p>When two nuclei grew and the distance between them was reduced, a liquid channel developed and facilitated their coalescence.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="images/CellReports.png" alt="Image">
+        <div class="carousel-caption">
+          <h3>Detecting Microbial Dysbiosis Associated with Pediatric Crohn Disease Despite the High Variability of the Gut Microbiota</h3>
         </div>      
       </div>
+
     </div>
 
     <!-- Left and right controls -->
@@ -102,44 +124,82 @@
     </a>
 </div>
 
-<div class="container text-left">
+<div id="About" class="container text-left" style="padding-top: 50px; margin-top: -50px;">
 <h3>Research Interests</h3>
 <p>My primary interests are statistical physics and complex systems.</p>
 <p>See also Prof. <a href="http://www.phys.ust.hk/yilong/">Yilong Han</a>'s Home Page.</p>
 </div>
   
-<div class="container text-center">
+<div id="Projects" class="container text-center" style="padding-top: 50px; margin-top: -50px;">
 <h3>Soft Matter Physics</h3>
-  <br><div class="row">
-    <div class="col-sm-4">
+
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="images/ProjMelting.png" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-9">
+      <div class="well text-left">
+      <h4>Melting of hard sphere crystals</h4>
+      <p>Coming soon.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
       <img src="images/fig5e.png" class="img-responsive" style="width:100%" alt="Image">
       <p>Melting of colloidal crystals</p>
+      <p>Copied from <a href="http://www.nature.com/ncomms/2015/150421/ncomms7942/full/ncomms7942.html">Nature Communications, 2016</a></p>
     </div>
-    <div class="col-sm-4"> 
-      <img src="images/fig5f.png" class="img-responsive" style="width:100%" alt="Image">
-      <p>Melting of colloidal crystals</p>    
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
+    <div class="col-sm-9">
+      <div class="well text-left">
+      <h4>Review: Melting of colloidal crystals</h4>
+      <p>Coming soon. It will be in <a href="#">Advanced Functional Materials, 2016</a></p>
       </div>
     </div>
   </div>
 
-<h3>BioPhysics</h3>
-  <br><div class="row">
-    <div class="col-sm-4">
+  <div class="row">
+    <div class="col-sm-3">
       <img src="images/fig5f.png" class="img-responsive" style="width:100%" alt="Image">
       <p>Melting of colloidal crystals</p>
+      <p>Copied from <a href="http://www.nature.com/ncomms/2015/150421/ncomms7942/full/ncomms7942.html">Nature Communications, 2016</a></p>
+    </div>
+    <div class="col-sm-9">
+      <div class="well">
+       <p>Please see the homepage of Prof. <a href="http://www.phys.ust.hk/yilong/">Yilong Han</a></p>
+      </div>
+      <div class="well">
+       <p>Those colloidal experiments were performed by Dr. Ziren Wang. See our research papers on <a href="http://science.sciencemag.org/content/338/6103/87">Science</a> and <a href="http://www.nature.com/ncomms/2015/150421/ncomms7942/full/ncomms7942.html">Nature Communications</a>.</p>
+      </div>
     </div>
   </div>
-</div><br>
+
+</div>
+
+<div id="Bioinformatics" class="container text-center" style="padding-top: 50px; margin-top: -50px;">
+<h3>Bioinformatics</h3>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="images/CellReports.png" class="img-responsive" style="width:100%" alt="Image">
+      <p>Copied from <a href="http://dx.doi.org/10.1016/j.celrep.2015.12.088">Cell Reports, 2016</a></p>
+    </div>
+    <div class="col-sm-9">
+      <div class="well text-left">
+      <h4>Detecting Microbial Dysbiosis Associated with Pediatric Crohn Disease Despite the High Variability of the Gut Microbiota</h4>
+      <p>See paper in <a href="http://dx.doi.org/10.1016/j.celrep.2015.12.088">Cell Reports, 2016</a></p>
+      </div>
+      <div class="well text-left">
+      <h4>Summary</h4>
+      <p>The relationship between the host and its microbiota is challenging to understand because both
+microbial communities and their environments are highly variable. We have developed a set of techniques based on population dynamics and information theory to address this challenge. These methods identify additional bacterial taxa associated with pediatric Crohn disease and can detect significant changes in microbial communities with fewer samples than previous statistical approaches required. We have also substantially improved the accuracy of the diagnosis based on the microbiota from stool samples, and we found that the ecological niche of a microbe predicts its role in Crohn disease. Bacteria typically residing in the lumen of healthy individuals decrease in disease, whereas bacteria typically residing on the mucosa of healthy individuals increase in disease. Our results also show that the associations with Crohn disease are evolutionarily conserved and provide a mutual information-based method to depict dysbiosis.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer class="container-fluid text-left">
-  <p>Home Page of Feng Wang, 2016</p>
+  <p>Home Page of Feng Wang, 2016. Created with <a href="http://getbootstrap.com/">Bootstrap 3.3.6</a></p>
 </footer>
 
 </body>
