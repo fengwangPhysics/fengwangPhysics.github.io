@@ -26,6 +26,7 @@
     /* The fixed navbar will overlay your other content, unless you add padding to the top of the body. */
     body {
       padding-top: 50px;
+      font-size: 18px;
     }
     
     /* Add a gray background color and some padding to the footer */
@@ -36,15 +37,34 @@
     
   .carousel-inner img {
       width: auto; /*100%; /* Set width to 100% */
-      margin: auto;
       min-height:300px;
       max-height:300px;
+      margin-left: auto;
+      margin-right: 50%;
   }
+    .carousel-indicators li {
+      background-color: #ffffff;
+      border-color: orange;
+    }
+    .carousel-indicators .active {
+      background-color: orange;
+    }
+    .carousel-caption {
+      max-width: 550px;
+      padding: 0 20px;
+      margin: 0 auto;
+      left: 50%;
+      text-align: center;
+      color: black;
+    }
 
   /* Hide the carousel text when the screen is less than 600 pixels wide */
   @media (max-width: 600px) {
     .carousel-caption {
-      display: none; 
+      display: none;
+    }
+    body {
+      font-size: 14px;
     }
   }
   </style>
@@ -63,13 +83,14 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
         <li><a href="#About">About</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects <span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="./publications.html"><span class="glyphicon glyphicon-list-alt"></span> Publications <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#Projects">Soft Matter Physics</a></li>
-            <li><a href="#Bioinformatics">Bioinformatics</a></li>
+            <li><a href="./publications.html">Soft Matter Physics</a></li>
+            <li><a href="./publications.html#Bioinformatics">Bioinformatics</a></li>
+            <li><a href="./publications.html#full-list">full list</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -78,12 +99,12 @@
             <li><a href="https://github.com/fengwangPhysics/MMICA">MMICA</a></li>
           </ul>
         </li>
-        <li><a href="./publications.html">Publications</a></li>
         <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -131,87 +152,17 @@
     </a>
 </div>
 
-<div id="About" class="container text-left" style="padding-top: 50px; margin-top: -50px;">
+<div id="About" class="container text-left" style="padding-top: 50px; margin-top: -50px; padding-bottom: 150px; color: #555555">
 <h3>About me</h3>
-<p>I am a postdoctoral fellow working on simulation and theoretical modeling in soft matter physics and statistical mechanics in Prof. <a href="http://www.phys.ust.hk/yilong/">Yilong Han</a>'s group, in the Department of Physics, Hong Kong University of Science and Technology.</p>
+<p>I am a fans of physics and math, especially statistical physics and complex systems. I'm fascinated by the rich collective behaviors of systems governed by simple rules of microscopic dynamics. Those help me to understand the nature and even the society. I'm interested in all aspects of statistical physics, such as phase transitions, kinetics, non-equilibrium processes, complex networks, and other many that I haven't deepen into, e.g. evolutionary dynamics, collective motions/patterns in biological systems. I prefer theoretical work and simulation than experiments, since I believe this can help to reach to more fundamental understandings and make experimental data meaningful.</p>
 
-<h3>Research Interests</h3>
-<p>My primary interests are statistical physics and complex systems. I have a broad interest in science:</p>
-<l>
-<li>statistical physics: phase transitions, non-equilibrium kinetics, disordered systems, soft
-matter, complex networks</li>
-<li>data mining and machine learning</li>
-</l>
+<p>I also like history, and history-based video games, such as the Total War series, Mount & Blade. I am interested in how an empire thrives and collapses, and how to command a huge military troop in a battle field such as besieging a city or fighting in mountains. Now I am also playing Pokemon Go.</p>
+
+<p>Currently, I am a postdoctoral fellow working on simulation and theoretical modeling in soft matter physics and statistical mechanics in Prof. <a href="http://www.phys.ust.hk/yilong/">Yilong Han</a>'s group, in the Department of Physics, Hong Kong University of Science and Technology.</p>
+
 </div>
   
-<div id="Projects" class="container text-center" style="padding-top: 50px; margin-top: -50px;">
-<h1>Soft Matter Physics</h1>
 
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="images/ProjMelting.png" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-9">
-      <div class="well text-left">
-      <h4>Melting of hard sphere crystals</h4>
-      <p>In preparation.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="images/fig5e.png" class="img-responsive" style="width:100%" alt="Image">
-      <p>Melting of colloidal crystals</p>
-      <p>Copied from <a href="http://www.nature.com/ncomms/2015/150421/ncomms7942/full/ncomms7942.html">Nature Communications, 2016</a></p>
-    </div>
-    <div class="col-sm-9">
-      <div class="well text-left">
-      <h3>Review: Melting of colloidal crystals</h3>
-      <p><a href="#">Advanced Functional Materials, 2016</a>, in press.</p>
-      <p>Abstract: Crystal melting is affected by many factors such as defects, surfaces, dimensionality, lattice structure and particle interaction, and thus exhibits rich phenomenology. It is usually a first-order phase transition which currently lacks a fundamental theory. Despite numerous studies over the past century, melting remains poorly understood at the microscopic level. Micrometer-sized colloidal particles can be viewed as “big atoms” which can assemble into various phases. Their thermal motions can be directly imaged and tracked using optical microscopy. Hence, colloids are powerful model systems for studying phase transitions. Recent progress made in fabricating tunable micrometer sized colloidal particles has enabled the direct visualization of crystal melting with single-particle dynamics. The observations have greatly expanded our understanding of melting kinetics In this review, we survey the experiments and simulations conducted on the superheating, melting and pre- melting of colloidal crystals. We discuss the latest results on crystal melting obtained from colloidal model systems and highlight challenges and future perspectives.</p>.
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="images/nmatCover.gif" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-9">
-      <div class="well text-left">
-      <h3>Two-step nucleation mechanism in solid-solid phase transitions</h3>
-      <p><a href="http://www.nature.com/nmat/journal/v14/n1/full/nmat4083.html"><span><em><strong>Nature Materials</strong></em></span> <strong>14</strong>, 101-108 (2015)</a></p>
-      <p>Abstract: The microscopic kinetics of ubiquitous solid–solid phase transitions remain poorly understood. Here, by using single-particle-resolution video microscopy of colloidal films of diameter-tunable microspheres, we show that transitions between square and triangular lattices occur via a two-step diffusive nucleation pathway involving liquid nuclei. The nucleation pathway is favoured over the direct one-step nucleation because the energy of the solid/liquid interface is lower than that between solid phases. We also observed that nucleation precursors are particle-swapping loops rather than newly generated structural defects, and that coherent and incoherent facets of the evolving nuclei exhibit different energies and growth rates that can markedly alter the nucleation kinetics. Our findings suggest that an intermediate liquid should exist in the nucleation processes of solid–solid transitions of most metals and alloys, and provide guidance for better control of the kinetics of the transition and for future refinements of solid–solid transition theory.</p>
-      </div>
-    </div>
-  </div>
-
-
-</div>
-
-<div id="Bioinformatics" class="container text-center" style="padding-top: 50px; margin-top: -50px;">
-<h1>Bioinformatics</h1>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="images/CellReports.png" class="img-responsive" style="width:100%" alt="Image">
-      <p>Copied from <a href="http://dx.doi.org/10.1016/j.celrep.2015.12.088"><span><em><strong>Cell Reports</strong></em></span> <strong>14</strong>, 945-955 (2016)</a></p>
-    </div>
-    <div class="col-sm-9">
-      <div class="well text-left">
-      <h4>Detecting Microbial Dysbiosis Associated with Pediatric Crohn Disease Despite the High Variability of the Gut Microbiota</h4>
-      <p><a href="http://dx.doi.org/10.1016/j.celrep.2015.12.088"><span><em><strong>Cell Reports</strong></em></span> <strong>14</strong>, 945-955 (2016)</a></p>
-      <p>Codes for MMICA can be found on <a href="https://github.com/fengwangPhysics/MMICA">Github</a>.</p>
-      </div>
-      <div class="well text-left">
-      <h4>Summary</h4>
-      <p>The relationship between the host and its microbiota is challenging to understand because both
-microbial communities and their environments are highly variable. We have developed a set of techniques based on population dynamics and information theory to address this challenge. These methods identify additional bacterial taxa associated with pediatric Crohn disease and can detect significant changes in microbial communities with fewer samples than previous statistical approaches required. We have also substantially improved the accuracy of the diagnosis based on the microbiota from stool samples, and we found that the ecological niche of a microbe predicts its role in Crohn disease. Bacteria typically residing in the lumen of healthy individuals decrease in disease, whereas bacteria typically residing on the mucosa of healthy individuals increase in disease. Our results also show that the associations with Crohn disease are evolutionarily conserved and provide a mutual information-based method to depict dysbiosis.</p>
-      </div>
-    </div>
-  </div>
-</div>
 
 <footer class="container-fluid text-left">
   <p>Home Page of Feng Wang, 2016. Created with <a href="http://getbootstrap.com/">Bootstrap 3.3.6</a></p>
